@@ -1,0 +1,34 @@
+.banner{
+  background: linear-gradient(45deg,purple,#ff00ef);
+  padding: 20px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+.banner .bgDecor{
+  left: 0px;top: 
+}
+.banner .bgDecor .circle span{
+  width: 100px;
+  height: 100px;
+  border-radius: 0%;
+  border: 1px solid #fff4;
+  display: block;
+  position: absolute;
+  transform: scale(calc(var(--i)*.7)) rotate(45deg);
+  background: #00000001;
+}
+.banner .logo{
+  color:#fff
+}
+
+.banner .img img{
+  width: 250px;
+  top: 50px;
+  filter: drop-shadow(10px 60px 50px #000);
+  left: -10px;
+}
+.banner .moto{
+  margin-top: 100px;
+  font-size: 1em;
+  text-align: right;
+}
