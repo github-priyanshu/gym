@@ -1,8 +1,8 @@
 .faci{
-  height: 500px;
-  background: #e1e1ee;
+  height: 600px;
+  background: linear-gradient(45deg,#e3fff7,#fcd3ff);
   border-radius: 10px 10px 0 0;
-  top: -20px;
+  top: -00px;
 }
 .viewPan{
   height: 500px;
@@ -23,12 +23,13 @@
   transform-style: preserve-3d;
   transform-origin: bottom;
   
-  transform: translateY(calc(var(--d)/-2)) rotate(calc(var(--i)*60deg))
+  transform: translateY(calc(var(--d)/-2)) rotate(calc(var(--i)*60deg));
+  
 }
 .viewPan .cen .view .plate{
   width: 100%;
   aspect-ratio: 3/5;
-  background: #fff;
+  /*! background: #fff; */
   transform-origin: top;
   transform: rotateX(90deg) scale(.8);
   border-radius: 10px;
@@ -39,13 +40,74 @@
   transform: rotateX(90deg)  scale(1) translateY(-26px);
   backface-visibility: visible;
 }
-.viewPan .cen .view .name,
 .viewPan .cen .view img{
-  width: 90%;
+  width: 100%;
   aspect-ratio: 3/5;
   position: absolute;
   top: 10px;
-  border-radius: 10px;
+  border-radius: 3px;
   object-fit: cover;
   color: red;
+  box-shadow: 0 5px 20px #0006;
+}
+.viewPan .cen .view .plate .name{
+  transition: all 1s cubic-bezier(0.36, 0.07, 0, 1.28);
+  opacity: 0;
+  pointer-events: none;
+  bottom: -135px;
+  color: #000;
+  transform: translateY(100px)
+}
+.viewPan .cen .view .plate.active .name{
+  opacity: 1;
+  transform: translateY(0px);
+  background: #fff;
+  width: 140px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px #0005;
+}
+
+/* BUBBLES STYLING */
+
+.listPan .bubbPan{
+  position: relative;
+  height: 490px;
+  overflow: auto;
+  flex-flow: column wrap;
+  width: calc(100% - 20px);
+  padding: 0 calc(50vw - 150px);
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
+.listPan .hiderx{
+  background: linear-gradient(90deg,#1c1c1c,transparent,#1c1c1c);
+  height: 100%;
+  pointer-events: none;
+  width: 100%;
+  position: absolute;
+}
+.listPan .bubbPan .bubble{
+  margin: 4vw;
+  color: #222;
+  z-index: 0;
+}
+
+.listPan .bubbPan .bubble .bbg{
+  width: 150px;
+  border-radius: 50%;
+  height: 150px;
+  background: linear-gradient(#fb8ce4,#9edbff);
+}
+.listPan .bubbPan .bubble::before{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  background: #9edbff;
+  z-index: -1;
+  border-radius: 50%;
+  top: 105%;
+  filter: blur(8px) opacity(.3);
 }

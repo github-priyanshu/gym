@@ -3,12 +3,10 @@ class makeFaciView{
 	rotated=0;
 
 	constructor(){
-		log(this.cen)
 
 		var html="";
 		var imgData="Boxing,Cardio Area,Cycling,Personal Trainer,Roping,Tredmill";
 		imgData=imgData.split(",");
-		log(imgData)
 		for(let i=1; i<=6; i++){
 			html+=`
 			<div class="view" style="--i: ${i}">
@@ -28,6 +26,12 @@ class makeFaciView{
 		this.scroll(0);
 
 		this.listenToRotate();
+		this.autoInt=setInterval(()=>{
+			var top=this.cen.getClientRects()[0].top;
+			if(top>0 && top<window.innerHeight){
+				this.scroll(this.active+1);
+			}
+		},3000)
 	}
 
 	listenToRotate(){
@@ -38,11 +42,9 @@ class makeFaciView{
 
 	scroll(num){
 		if(num<=-6){num=0}
-		log(num)
 		var actualElem= num>=0?num%6:(num%6)+6;
 		try{op(".view .plate.active").classList.remove("active");}catch{}
 
-		log(actualElem)
 
 		this.plates[actualElem].classList.add('active');
 
@@ -50,7 +52,6 @@ class makeFaciView{
 
 		var plNum=this.plates[actualElem].parentElement.style.getPropertyValue("--i")
 		this.cen.style.transform=`perspective(400px) rotateX(-90deg) rotate(${(6-num-1)*60}deg)`;
-
 	}
 }
 
@@ -97,10 +98,10 @@ function onSwipe(elem,fun,direction=false){
 }
 
 function swiped(obj){
+	clearInterval(makeFaci.autoInt);
 	if(obj.startsWith("right")){
 		makeFaci.scroll(makeFaci.active-1);
 	}else{
 		makeFaci.scroll(makeFaci.active+1);
 	}
-	log(obj)
 }
