@@ -1,4 +1,4 @@
-   @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Neucha&family=Pacifico&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Neucha&family=Kaushan+Script&display=swap');
 /*
 
   font-family: 'Delius Swash Caps', cursive // to write facilities;
@@ -9,7 +9,7 @@
 html{
   --font_faci: 'Delius Swash Caps', cursive;
   --font_body: 'Neucha', cursive;
-  --font_moto: 'Pacifico', cursive;
+  --font_moto: 'Kaushan Script', cursive;
 }
 *{
   margin: 0;
