@@ -70,7 +70,10 @@
 }
 
 /* BUBBLES STYLING */
-
+.scrPan ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 .listPan .bubbPan{
   position: relative;
   height: 490px;
@@ -110,4 +113,64 @@
   border-radius: 50%;
   top: 105%;
   filter: blur(8px) opacity(.3);
+}
+
+/* DETAIL CSS */
+
+.scrPan .detail{
+  padding: 10px 0;
+}
+.planPan {
+  display: flex;
+  flex-flow: row-wrap;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.planPan .planBox{
+  margin: 40px;
+  background: #fff;
+  padding: 10px;
+  min-width: 300px;
+  
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 5px 50px #0003;
+  display: inline-block;
+}
+.planPan .planBox .faciBox > div{
+  margin: 5px 0;
+}
+
+
+/* REACH US NOW */
+.data .map{
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin: 40px 20px 20px 20px;
+  padding: 20px;
+  height: 400px;
+}
+.data .map iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.data .map .locIco{
+  position: absolute;
+  background: #1c1c1c;
+  border: 2px solid ;
+  border-radius: 50%;
+  padding: 15px;
+  top: -0px;
+  box-shadow: 0 5px 30px #000;
+}
+.callNow{
+  padding: 10px 20px;
+  border-radius: 99px;
+  background: linear-gradient(90deg,#ff009b,#ff5400);
+  padding-top: 14px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px #ff540055;
+  margin-bottom: 100px;
 }
