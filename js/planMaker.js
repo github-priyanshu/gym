@@ -1,9 +1,9 @@
 class plans{
 	plan=[
-		['50','20-30 min',["faciliti1","faciliti2","faciliti3","faciliti4"]],
-		['100','30-60 min',["faciliti1","faciliti2","faciliti3","faciliti4"]],
-		['500','1-3 Hours',["faciliti1","faciliti2","faciliti3","faciliti4"]],
-		['1000','All time access',["faciliti1","faciliti2","faciliti3","faciliti4"]],
+		['50','20-30 min',["Cardio Area","Crossfit","Aerobics","Boxing"]],
+		['100','30-60 min',["Yoga","","Group Training","Personal Training"]],
+		['500','1-3 Hours',["Aerobics","Modern Equipments","Nutrition Support","Zumba"]],
+		['1000','Up to 6 Hours',["Modern Equipments","Personal Training","Sports Condioning","+All Other"]],
 	]
 	static pan=op(".planPan");
 
